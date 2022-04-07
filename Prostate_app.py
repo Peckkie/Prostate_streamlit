@@ -75,7 +75,7 @@ def plot_img(df):
             #st.success(string)
             image_pre = cv2.rectangle(img_c, (xmin_pre ,ymin_pre), (xmax_pre, ymax_pre), (32, 32, 216), 3) #32, 32, 216 | 57, 0, 199
             image_pre_ = cv2.putText(image_pre, label, (xmin_pre, ymin_pre-10), 3, 0.8, [32, 32, 216], thickness=2, lineType=1)
-        path_img = "image/"+file.name
+        path_img = "images/"+file.name
         cv2.imwrite(path_img, image_pre_)
     
 def plot_img_str(df):
@@ -105,9 +105,9 @@ if file is None:
 else:
     image = Image.open(file)
     #st.image(image, use_column_width=True)
-    image.save("image/"+file.name)
+    image.save("images/"+file.name)
     
-    path_img = 'image/'+file.name
+    path_img = 'images/'+file.name
     #st.write(file.type +'/'+file.name) #file.name
     df = predict_box(path_img, thres)
     plot_img(df)
