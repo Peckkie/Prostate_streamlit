@@ -74,7 +74,7 @@ def plot_img(df):
             #string = f'{label_}: Cervical fracture, Confident {conf_box}'
             #st.success(string)
             image_pre = cv2.rectangle(img_c, (xmin_pre ,ymin_pre), (xmax_pre, ymax_pre), (32, 32, 216), 3) #32, 32, 216 | 57, 0, 199
-            image_pre_ = cv2.putText(image_pre, label, (xmin_pre, ymin_pre-10), 3, 0.8, [32, 32, 216], thickness=2, lineType=1)
+            image_pre_ = cv2.putText(image_pre, label, (xmin_pre, ymin_pre-10), 3, 0.8, [156, 19, 19], thickness=2, lineType=1) #156, 19, 19|
         path_img = "images/"+file.name
         cv2.imwrite(path_img, image_pre_)
     
