@@ -98,7 +98,7 @@ from PIL import Image, ImageOps
 import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-thres = st.slider("Confidence threshold", 0.00, 1.00, 0.70)
+thres = st.slider("Confidence threshold", 0.00, 1.00, 0.10)
 
 if file is None:
     st.text("Please upload an image file")
