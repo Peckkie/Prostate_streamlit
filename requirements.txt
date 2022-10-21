@@ -8,7 +8,7 @@ tqdm
 simplejson
 tensorflow
 opencv-python-headless
-
+ipython
 
 # Base ----------------------------------------
 matplotlib>=3.2.2
